@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html class="text-[62.5%]" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7a1de9ecdfc9_webclip%202.jpg"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7a9b50ecdfc8_favicon%202.jpg"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+      input {
+        @apply ring-offset-0 ring-0;
+      }
+      .without-ring {
+        @apply focus:ring-0 focus:ring-offset-0;
+      }
+      input {
+        --tw-ring-shadow: 0 0 #000 !important;
+      }
+      ::before {
+        --tw-ring-color: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            gridTemplateColumns: {
+              16: "repeat(16, minmax(0, 1fr))",
+              layout: "2fr 1fr 1fr 2fr",
+            },
+            flexGrow: {
+              2: "2",
+              3: "3",
+              4: "4",
+              5: "5",
+            },
+            screens: {
+              sm: { max: "767px" },
+              // => @media (min-width: 640px and max-width: 767px) { ... }
+
+              md: { min: "768px", max: "1023px" },
+              // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+              lg: { min: "1024px" },
+              // => @media (min-width: 1024px ) { ... }
+            },
+            backgroundPosition: {
+              bottom: "bottom",
+              center: "50% 50%",
+            },
+          },
+          transitionProperty: {
+            height: "height",
+            spacing: "margin, padding",
+            width: "width",
+          },
+        },
+      };
+    </script>
+    <title>CoffeeStyle</title>
+  </head>
+  <body class="font-[karla]">
+    <div
+      class="fixed bottom-[2rem] right-[3rem] border border-[#ccc] px-[0.8rem] py-[0.6rem] rounded-[8px] bg-white"
+    >
+      <a href="" class="flex gap-[1rem] text-[1.6rem] font-bold text-black"
+        ><img
+          src="https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon.f67cd735e3.svg"
+          alt=""
+        />Made in VietNam</a
+      >
+    </div>
+    <header>
+      <div class="max-w-[1200px] mx-auto flex py-[2.5rem] sm:relative sm:z-10">
+        <div class="grow-2">
+          <a href="" class="w-full h-auto">
+            <img
+              src="https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7a4ae4ecdfb2_CoffeeStyle%20Logo.png"
+              class="max-w-[11.2rem] mx-auto"
+              alt=""
+            />
+          </a>
+        </div>
+        <nav
+          class="grow-5 hidden md:top-[5rem] lg:top-0 lg:block relative"
+          id="menuTop"
+        >
+          <ul
+            class="lg:flex text-[1.2rem] bg-white sm:absolute font-bold uppercase tracking-[0.2rem] absolute w-full justify-around"
+          >
+            <li class="">
+              <a
+                class="hover:after:w-full relative after:transition-[width] after:w-0 after:content-['']hover:opacity-100 opacity-70 after:duration-300 after:h-[2px] after:bg-[#A25F4B] after:absolute after:left-0 after:bottom-[-4px]"
+                href="./main.html"
+                >Home</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="hover:after:w-full relative after:transition-[width] after:w-0 after:content-[''] after:duration-300 after:h-[2px] after:bg-[#A25F4B] after:absolute after:left-0 after:bottom-[-4px]"
+                href=""
+              >
+                OUR PRODUCTS</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="hover:after:w-full relative after:transition-[width] after:w-0 after:content-[''] hover:opacity-100 opacity-70 after:duration-300 after:h-[2px] after:bg-[#A25F4B] after:absolute after:left-0 after:bottom-[-4px]"
+                href="blog.html"
+                >BLOG</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="hover:after:w-full relative after:transition-[width] after:w-0 after:content-[''] hover:opacity-100 opacity-70 after:duration-300 after:h-[2px] after:bg-[#A25F4B] after:absolute after:left-0 after:bottom-[-4px]"
+                href="./about.html"
+                >ABOUT
+              </a>
+            </li>
+            <li class="">
+              <a
+                class="hover:after:w-full relative after:transition-[width] after:w-0 after:content-[''] hover:opacity-100 opacity-70 after:duration-300 after:h-[2px] after:bg-[#A25F4B] after:absolute after:left-0 after:bottom-[-4px]"
+                href="./contact.html"
+                >CONTACT</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="hover:after:w-full relative after:transition-[width] after:w-0 after:content-[''] opacity-70 hover:opacity-100 after:duration-300 after:h-[2px] after:bg-[#A25F4B] after:absolute after:left-0 after:bottom-[-4px]"
+                href=""
+                >STYLEGUIDE
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="grow-2">
+          <a
+            href=""
+            class="flex text-[1.6rem] uppercase font-bold tracking-widest opacity-60 hover:opacity-100 max-w-[12rem] justify-between mx-auto"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-12 h-12 ml-[1.5rem]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+              />
+            </svg>
+            <span class="inline-block">cart</span>
+            <span
+              class="inline-block text-white bg-black rounded-[48%] max-h-[2.8rem] min-w-[2.6rem] text-center"
+              >0</span
+            >
+          </a>
+        </div>
+        <div class="grow-3 lg:hidden">
+          <svg
+            id="toggleMenu"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-10 h-10 lg:hidden cursor-pointer"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="navMenu absolute block w-auto h-auto"></div>
+    </header>
+    <main>
+      <section>
+        <div
+          class="max-w-[96rem] my-[10rem] grid grid-cols-1 lg:grid-cols-2 mx-auto"
+        >
+          <div class="relative">
+            <img
+              class="mr-[2rem] lg:max-w-[46rem] lg:max-h-[46rem]"
+              src="./images/bluePremium.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="pl-[6rem] pt-[6rem] mx-auto lg:max-w-auto max-w-[63rem] text-center lg:text-start"
+          >
+            <h2 class="text-[3.6rem] mt-[1rem] mb-[1.5rem]">
+              Blue Premium Mug
+            </h2>
+            <p class="text-[1.8rem] text-[#1D1F2EB3]">
+              Amet suscipit omnis eum necessitatibus quos doloribus. Ut placeat
+              et corrupti.
+            </p>
+            <div class="my-[3rem]">
+              <h3 class="text-[3rem] mr-[1rem]">$ 99.00 USD</h3>
+              <form id="" name="" method="post" class="">
+                <label
+                  for=""
+                  class="block tracking-[2px] text-[1.2rem] text-[#1D1F2E99] mb-[1.2rem] font-bold"
+                  >QUANTITY</label
+                >
+                <input
+                  type="number"
+                  value="1"
+                  inputmode="numeric"
+                  min="1"
+                  pattern="^[0-9]+$"
+                  class="py-[1.8rem] px-[2.4rem] max-w-[10rem] text-[1.2rem] bg-[#FAFAFA] border-[#ccc] border-[1px] mr-[1rem]"
+                />
+                <button
+                  class="uppercase bg-[#1D1F2E] text-white tracking-[2px] text-[1.2rem] font-bold py-[1.8rem] px-[2.4rem]"
+                >
+                  add to cart
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-w-[96rem] my-[10rem] grid lg:grid-cols-2 mx-auto gap-[4rem] lg:text-start text-center"
+        >
+          <div class="mx-auto lg:max-w-auto max-w-[63rem]">
+            <h2
+              class="text-[1.2rem] mb-[2rem] text-[#1D1F2E] tracking-[2px] font-bold opacity-60"
+            >
+              DETAILS
+            </h2>
+            <p
+              class="text-[1.6rem] text-[#1D1F2EB3] mb-[1.5rem] leading-[2.8rem]"
+            >
+              Quas vel perferendis accusantium eum cum voluptates libero
+              doloribus voluptates. A et quia qui quia. Sunt tempore est sit
+              facilis. Ducimus est ut neque sunt eum iusto. Consequatur quia
+              occaecati enim omnis repudiandae labore.
+            </p>
+          </div>
+          <div
+            class="lg:pl-[6rem] mx-auto lg:max-w-auto max-w-[63rem] pl-0 lg:text-start text-center"
+          >
+            <h2
+              class="text-[1.2rem] mb-[2rem] text-[#1D1F2E] tracking-[2px] font-bold opacity-60"
+            >
+              DIMENSIONS
+            </h2>
+            <ul class="lg:list-disc list-none lg:pl-[1.8rem] pl-0 my-[1rem]">
+              <li class="text-[1.6rem]">
+                <p class="text-[#1D1F2E] opacity-70">
+                  Lenght (in):
+                  <span class="text-[1.6rem] text-[#000]">56.0</span>
+                </p>
+              </li>
+              <li class="text-[1.6rem]">
+                <p class="text-[#1D1F2E] opacity-70">
+                  Height (in):
+                  <span class="text-[1.6rem] text-[#000]">56.0</span>
+                </p>
+              </li>
+              <li class="text-[1.6rem]">
+                <p class="text-[#1D1F2E] opacity-70">
+                  Width (in):
+                  <span class="text-[1.6rem] text-[#000]">56.0</span>
+                </p>
+              </li>
+              <li class="text-[1.6rem]">
+                <p class="text-[#1D1F2E] opacity-70">
+                  Weight (oz):
+                  <span class="text-[1.6rem] text-[#000]">56.0</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div
+          class="grid lg:max-h-[46rem] lg:grid-cols-2 bg-[#1D1F2E] lg:text-start text-center"
+        >
+          <div
+            class="bg-cover"
+            style="background-image: url(./images/bg2.jpg)"
+          ></div>
+          <div
+            class="text-white py-[4rem] pl-[7rem] mt-[1.5rem] lg:max-w-[47rem]"
+          >
+            <h2 class="text-[2.4rem] mb-[1rem]">
+              Handmade by <span class="font-bold">CoffeeStyle.</span>
+            </h2>
+            <p class="mb-[3rem] text-[1.8rem]">
+              The most versatile furniture system ever created. Designed to fit
+              your life.
+            </p>
+            <div class="flex">
+              <div class="">
+                <img
+                  src="images/diamond.png"
+                  alt=""
+                  class="max-w-[2.8rem] mr-[2rem]"
+                />
+              </div>
+              <div class="text-[1.6rem]">
+                <h3 class="">Premium Quality</h3>
+                <p class="mb-[1.5rem] text-[#FFFFFFB2]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in.
+                </p>
+              </div>
+            </div>
+            <div class="flex mt-[1.5rem]">
+              <div class="">
+                <img
+                  src="images/lightBuld.png"
+                  alt=""
+                  class="max-w-[1.6rem] mr-[2rem]"
+                />
+              </div>
+              <div class="text-[1.6rem]">
+                <h3 class="">Gentle to the Environment</h3>
+                <p class="mb-[1.5rem] text-[#FFFFFFB2]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="max-w-[94rem] mx-auto">
+          <div
+            class="max-w-[64rem] mx-auto my-[8rem] flex justify-center items-center"
+          >
+            <div class="w-[7rem] bg-black h-[0.1rem] opacity-10"></div>
+            <div
+              class="text-[1.2rem] font-bold tracking-[2px] opacity-60 text-[#1d1f2e] px-[1.5rem]"
+            >
+              YOU MIGHT ALSO LIKE THESE
+              <div
+                class="w-[7rem] bg-black h-[0.1rem] opacity-10 inline-block"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:gap-[2rem] md:gap-0 sm:gap-0 text-center"
+          >
+            <div>
+              <div class="group relative">
+                <img
+                  class="sm:max-w-[94%] mx-auto md:max-w-[94%]"
+                  src="https://assets-global.website-files.com/5be96251aaba7a84f6ecdf81/5be96251aaba7a6173ece01a_trent-erwin-570303-unsplash.jpg"
+                  alt=""
+                />
+                <div
+                  class="absolute opacity-90 top-4 right-4 font-bold px-[1.2rem] py-[0.8rem] text-[1.6rem] text-[#a25f4b] bg-white"
+                >
+                  On Sale
+                </div>
+                <div class="relative">
+                  <a
+                    href=""
+                    class="w-11/12 opacity-0 absolute group-hover:opacity-85 group-hover:-translate-y-[1.2rem] translate-y-[1.8rem] duration-700 right-[1.4rem] font-bold tracking-wider bottom-0 bg-white text-[1.4rem] py-[1.4rem]"
+                    >EXPLORE MUG</a
+                  >
+                </div>
+              </div>
+              <div class="my-[1.8rem]">
+                <h2 class="text-[2.4rem]">Red Love Cup</h2>
+                <p class="my-[2rem] text-[#a25f4b] text-[1.8rem] font-bold">
+                  $50.00
+                  <span
+                    class="inline-block text-[1.6rem] font-normal text-gray-400 line-through"
+                    >$ 99.00 USD</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="group relative">
+                <img
+                  class="sm:max-w-[94%] mx-auto md:max-w-[94%]"
+                  src="https://assets-global.website-files.com/5be96251aaba7a84f6ecdf81/5be96251aaba7a0c09ece01c_steve-harvey-523112-unsplash.jpg"
+                  alt=""
+                />
+                <div
+                  class="absolute opacity-90 top-4 right-4 font-bold px-[1.2rem] py-[0.8rem] text-[1.6rem] text-[#a25f4b] bg-white"
+                >
+                  On Sale
+                </div>
+                <div class="relative">
+                  <a
+                    href="./allProducts.html"
+                    class="w-11/12 opacity-0 absolute group-hover:opacity-85 group-hover:-translate-y-[1.2rem] translate-y-[1.8rem] duration-700 right-[1.4rem] font-bold tracking-wider bottom-0 bg-white text-[1.4rem] py-[1.4rem]"
+                    >EXPLORE MUG</a
+                  >
+                </div>
+              </div>
+              <div class="my-[1.8rem]">
+                <h2 class="text-[2.4rem]">Black Tea Cup</h2>
+                <p class="my-[2rem] text-[#a25f4b] text-[1.8rem] font-bold">
+                  $50.00
+                  <span
+                    class="inline-block text-[1.6rem] font-normal text-gray-400 line-through"
+                    >$ 99.00 USD</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="group">
+                <img
+                  class="sm:max-w-[94%] mx-auto md:max-w-[94%]"
+                  src="https://assets-global.website-files.com/5be96251aaba7a84f6ecdf81/5be96251aaba7a223decdff8_ronaldo-arthur-vidal-66241-unsplash.jpg"
+                  alt=""
+                />
+                <div class="relative">
+                  <a
+                    href=""
+                    class="w-11/12 opacity-0 absolute group-hover:opacity-85 group-hover:-translate-y-[1.2rem] translate-y-[1.8rem] duration-700 right-[1.4rem] font-bold tracking-wider bottom-0 bg-white text-[1.4rem] py-[1.4rem]"
+                    >EXPLORE MUG</a
+                  >
+                </div>
+              </div>
+              <div class="my-[1.8rem]">
+                <h2 class="text-[2.4rem]">B&W Essentials Mug</h2>
+                <p>
+                  <span class="my-[2rem] block text-[1.6rem] text-gray-400"
+                    >$ 99.00 USD</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <div
+          class="max-w-[144rem] bg-[#1D1F2E] h-[32.7rem] mx-auto flex justify-center items-center"
+        >
+          <div class="text-center">
+            <div class="flex justify-center items-center">
+              <div class="w-[4.8rem] bg-slate-800 h-[0.2rem]"></div>
+              <div class="text-white opacity-60 font-bold text-[1.6rem] mx-8">
+                SIGN UP AND GET FREE COFFEE BAGS
+              </div>
+              <div class="w-[4.8rem] bg-slate-800 h-[0.2rem]"></div>
+            </div>
+            <h2 class="text-[3.6rem] text-white py-[2rem]">Coffee Updates</h2>
+            <div class="">
+              <form action="POST">
+                <input
+                  class="placeholder:uppercase outline-none ring-0 ring-offset-0 border-[#2f303e] mr-2 focus:ring-0 focus:ring-offset-0 py-[1.8rem] px-[2.4rem] text-[1.6rem] focus:outline-none tracking-[0.2rem] w-[30rem] text-white bg-transparent"
+                  type="text"
+                  placeholder="customer@coffestyle.io"
+                />
+                <button
+                  class="py-[1.6rem] px-[2.4rem] font-bold bg-white text-[#1D1F2E] text-[1.6rem]"
+                >
+                  subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="max-w-[94rem] mx-auto">
+        <div
+          class="lg:grid lg:gap-0 gap-y-[4rem] flex flex-col lg:grid-rows-[1fr_2fr_1fr] my-[10rem] lg:grid-cols-[2fr_1fr_1fr_2fr]"
+        >
+          <div class="">
+            <img
+              class="max-w-[11.1rem] sm:mx-auto md:mx-auto"
+              src="https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7a4ae4ecdfb2_CoffeeStyle%20Logo.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <p
+              class="text-[1.4rem] text-[#1D1F2EB3] mb-[1rem] md:text-center sm:text-center"
+            >
+              Delivering the best coffee life since 1996. From coffee geeks to
+              the real ones.
+            </p>
+          </div>
+          <div class="flex items-end md:justify-center sm:justify-center">
+            <p href="" class="text-[#1D1F2E4D] text-[1.4rem]">
+              CoffeeStyle Inc. © 1996
+            </p>
+          </div>
+          <div class="">
+            <h2
+              class="text-[1.6rem] opacity-60 md:text-center sm:text-center tracking-wide text-[#1D1F2E] font-semibold"
+            >
+              MENU
+            </h2>
+          </div>
+          <div class="">
+            <ul class="md:text-center sm:text-center">
+              <li class="text-[#1D1F2EB3] mb-[1rem]">
+                <a href="" class="text-[1.4rem] font-bold opacity-60"> Home</a>
+              </li>
+              <li class="text-[#1D1F2EB3] mb-[1rem]">
+                <a href="" class="text-[1.4rem] font-bold opacity-60">
+                  Our Products</a
+                >
+              </li>
+              <li class="text-[#1D1F2EB3] mb-[1rem]">
+                <a href="" class="text-[1.4rem] font-bold opacity-60"> About</a>
+              </li>
+              <li class="text-[#1D1F2EB3] mb-[1rem]">
+                <a href="" class="text-[1.4rem] font-bold opacity-60">
+                  Contact</a
+                >
+              </li>
+              <li class="text-[#1D1F2EB3] mb-[1rem]">
+                <a href="" class="text-[1.4rem] font-bold opacity-60">
+                  Styleguide</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="">
+            <h2
+              class="text-[#1D1F2E] md:text-center sm:text-center text-[1.6rem] opacity-60 tracking-widest font-bold"
+            >
+              Follow Us
+            </h2>
+          </div>
+          <div class="flex items-end md:justify-center sm:justify-center">
+            <ul>
+              <li class="mb-[1rem]">
+                <a class="text-[1.4rem] opacity-60 text-[#1D1F2#]" href=""
+                  >Facebook</a
+                >
+              </li>
+              <li class="mb-[1rem]">
+                <a class="text-[1.4rem] opacity-60 text-[#1D1F2#]" href=""
+                  >Instagram</a
+                >
+              </li>
+              <li class="mb-[1rem]">
+                <a class="text-[1.4rem] opacity-60 text-[#1D1F2#]" href=""
+                  >Pinterest</a
+                >
+              </li>
+              <li class="mb-[1rem]">
+                <a class="text-[1.4rem] opacity-60 text-[#1D1F2#]" href=""
+                  >Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="">
+            <h2
+              class="text-[1.6rem] md:text-center sm:text-center font-bold opacity-60 tracking-wider"
+            >
+              CONTACT US
+            </h2>
+          </div>
+          <div class="">
+            <p
+              class="text-[1.6rem] mb-[1rem] opacity-60 md:text-center sm:text-center"
+            >
+              We’re Always Happy to Help
+            </p>
+            <div class="flex md:justify-center sm:justify-center">
+              <a class="text-[2.4rem] opacity-70" href="">us@coffeestyle.io</a>
+            </div>
+          </div>
+          <div class="flex items-end md:justify-center sm:justify-center">
+            <p class="text-[1.4rem] opacity-40 mb-[2.8rem]">
+              Powered by Webflow
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
